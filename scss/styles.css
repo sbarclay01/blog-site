@@ -233,9 +233,11 @@ nav button {
 .card-title {
   font-size: 1.5rem;
   margin-bottom: -0.3rem;
+  color: inherit;
 }
 
 .card-title-link {
+  color: #000;
   text-decoration: none;
 }
 
@@ -300,13 +302,16 @@ nav button {
 }
 
 .focus-section .card-title {
-  color: white;
   -webkit-padding-start: 0.2rem;
           padding-inline-start: 0.2rem;
   width: 98%;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+}
+
+.focus-section .card-title-link {
+  color: white;
 }
 
 .focus-section .card-intro {
