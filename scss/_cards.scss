@@ -2,14 +2,13 @@
   gap: 1rem;
   width: 100%;
   align-items: start;
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding-inline: 2vw;
 }
 
 .card {
   color: black;
-  display: grid;
-  align-items: start;
   justify-self: start;
   grid-column: span 4;
   width: 100%;
@@ -23,8 +22,6 @@
     line-height: 2;
     font-size: 1.8ch;
     color: $primary-color;
-    margin-bottom: -0.5vh;
-    padding-left: 0.3em;
     position: relative;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -36,12 +33,12 @@
       width: 40%;
       height: 3px;
       bottom: 0;
-      left: 5px;
+      left: 0;
     }
   }
 
   &-title {
-    font-size: 1.5rem;
+    font-size: 2ch;
     margin-bottom: -0.3rem;
     color: inherit;
 
@@ -60,9 +57,10 @@
     grid-template-columns: 50px 1fr;
     grid-template-rows: 50px;
     align-items: center;
-    justify-self: end;
     gap: 10px;
     padding-right: 10px;
+    width: max-content;
+    margin-left: auto;
 
     &-img {
       width: 80%;
@@ -89,17 +87,18 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin-bottom: 20px;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: $primary-accent-color;
 
   .card {
-    background-color: white;
-    padding: 0.2rem;
+    grid-column: span 6;
+    align-items: start;
     width: 100%;
     height: 100%;
     margin-bottom: 1em;
 
     &-title {
-      padding-inline-start: 0.2rem;
-      width: 98%;
       align-self: start;
 
       &-link {
@@ -108,8 +107,6 @@
     }
 
     &-intro {
-      padding: 0 0.5rem 0.5rem 0.5rem;
-      width: 98%;
       color: white;
     }
 
@@ -127,13 +124,7 @@
 @media (min-width: 600px) {
   .focus-section {
     .card {
-      grid-column: span 6;
-      background-color: $primary-accent-color;
-      padding: 1rem;
-      align-items: start;
-
       &-img {
-        padding: 0.5em;
         object-fit: cover;
       }
 
@@ -149,21 +140,12 @@
 @media (min-width: 900px) {
   .card {
     grid-column: span 4;
-
-    &-intro {
-      padding-inline-start: 1rem;
-    }
   }
 
   .focus-section {
     .card {
       &-title {
-        padding-inline-start: 2rem;
         font-size: 2rem;
-      }
-
-      &-intro {
-        padding-inline-start: 1rem;
       }
     }
   }

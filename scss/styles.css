@@ -188,6 +188,8 @@ nav button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   padding-inline: 2vw;
@@ -195,11 +197,6 @@ nav button {
 
 .card {
   color: black;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
   -ms-grid-column-align: start;
       justify-self: start;
   grid-column: span 4;
@@ -214,8 +211,6 @@ nav button {
   line-height: 2;
   font-size: 1.8ch;
   color: #006d77;
-  margin-bottom: -0.5vh;
-  padding-left: 0.3em;
   position: relative;
   margin-top: 20px;
   margin-bottom: 5px;
@@ -228,11 +223,11 @@ nav button {
   width: 40%;
   height: 3px;
   bottom: 0;
-  left: 5px;
+  left: 0;
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 2ch;
   margin-bottom: -0.3rem;
   color: inherit;
 }
@@ -256,10 +251,12 @@ nav button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-column-align: end;
-      justify-self: end;
   gap: 10px;
   padding-right: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
 }
 
 .card .byline-img {
@@ -292,20 +289,22 @@ nav button {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   margin-bottom: 20px;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #83c5be;
 }
 
 .focus-section .card {
-  background-color: white;
-  padding: 0.2rem;
+  grid-column: span 6;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   width: 100%;
   height: 100%;
   margin-bottom: 1em;
 }
 
 .focus-section .card-title {
-  -webkit-padding-start: 0.2rem;
-          padding-inline-start: 0.2rem;
-  width: 98%;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
@@ -316,8 +315,6 @@ nav button {
 }
 
 .focus-section .card-intro {
-  padding: 0 0.5rem 0.5rem 0.5rem;
-  width: 98%;
   color: white;
 }
 
@@ -333,16 +330,7 @@ nav button {
 }
 
 @media (min-width: 600px) {
-  .focus-section .card {
-    grid-column: span 6;
-    background-color: #83c5be;
-    padding: 1rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
   .focus-section .card-img {
-    padding: 0.5em;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -357,18 +345,8 @@ nav button {
   .card {
     grid-column: span 4;
   }
-  .card-intro {
-    -webkit-padding-start: 1rem;
-            padding-inline-start: 1rem;
-  }
   .focus-section .card-title {
-    -webkit-padding-start: 2rem;
-            padding-inline-start: 2rem;
     font-size: 2rem;
-  }
-  .focus-section .card-intro {
-    -webkit-padding-start: 1rem;
-            padding-inline-start: 1rem;
   }
 }
 
