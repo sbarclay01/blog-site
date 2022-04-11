@@ -1,86 +1,9 @@
-//Partials
+// Set up base project
 @import "reset";
+@import "vars";
 
-$font-stack: "Open Sans", sans-serif;
-$primary-color: #006d77;
-$primary-accent-color: #83c5be;
-$accent-color: #e29578;
-$secondary-accent-color: #ffddd2;
-$bg-color: #edf6f9;
-
-$gap: 2rem;
-
-// ****************************
-//         NAVIGATION
-// ****************************
-
-nav {
-  background-color: $primary-color;
-  color: white;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px;
-  margin-bottom: 20px;
-
-  .logo {
-    width: 70vw;
-    // max-width: 550px;
-    // padding: 1em 0 2em 1em;
-  }
-
-  .blog-title {
-    padding: 0 10px 0 20px;
-    font-size: clamp(1.5rem, 2.5vw, 4rem);
-    margin-bottom: -1vh;
-  }
-
-  .blog-sub {
-    padding: 0 10px 0 20px;
-    font-size: clamp(0.5rem, 1rem, 1.2rem);
-  }
-
-  .primary-navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 30rem;
-    list-style: none;
-    background-color: rgba($color: #013844, $alpha: 0.9);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem);
-
-    // padding: 60px 60px;
-
-    li {
-      a {
-        text-decoration: none;
-        color: white;
-
-        &:visited {
-          color: white;
-        }
-
-        &:hover,
-        &:focus {
-          color: $accent-color;
-        }
-      }
-    }
-  }
-}
-
-@supports (backdrop-filter: blur(none)) and (-webkit-backdrop-filter: blur(1rem)) {
-  nav {
-    ul {
-      background-color: rgba($color: #065264, $alpha: 0.3);
-      backdrop-filter: blur(1rem);
-      -webkit-backdrop-filter: blur(1rem);
-    }
-  }
-}
+// Import sections
+@import "nav";
 
 // ****************************
 //         MAIN BODY
@@ -527,107 +450,8 @@ footer {
   }
 }
 
-// ****************************
-//         MEDIA QUERIES
-// ****************************
-
-@media (max-width: 600px) {
-  $gap: 4rem;
-
-  nav {
-    background-color: none;
-
-    .primary-navigation {
-      align-items: right;
-      justify-content: flex-start;
-      position: fixed;
-      inset: 0 0 0 30%;
-      padding: 25vh 2em;
-      gap: $gap;
-      z-index: 1000;
-      transform: translateX(100%);
-      transition: transform 350ms ease-out;
-
-      &[data-visible="true"] {
-        transform: translateX(0%);
-      }
-    }
-  }
-
-  .logo {
-    padding-block: 2em 1em;
-  }
-
-  .mobile-menu {
-    fill: white;
-    float: right;
-  }
-
-  .mobile-nav-icon {
-    height: 24px;
-    width: 24px;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 9999;
-  }
-
-  button {
-    background: transparent;
-    border: none;
-  }
-}
-
 @media (min-width: 600px) {
   $gap: 6em;
-
-  nav {
-    width: 100%;
-
-    .logo {
-      padding-block: 2em 2em;
-      max-width: 680px;
-    }
-
-    .primary-navigation {
-      display: flex;
-      flex-direction: row;
-      gap: $gap;
-      font-size: 1.5vw;
-      list-style: none;
-      align-items: center;
-      background-color: $primary-color;
-
-      li {
-        a {
-          &:visited {
-            color: white;
-          }
-
-          &:hover,
-          &:focus {
-            color: $accent-color;
-          }
-        }
-      }
-    }
-
-    .mobile-menu {
-      display: none;
-    }
-
-    .mobile-nav-icon {
-      display: none;
-    }
-
-    button {
-      display: none;
-    }
-  }
 
   main {
     max-width: 80%;
@@ -905,45 +729,6 @@ footer {
 
 @media screen and (min-width: 900px) {
   $gap: 8em;
-
-  nav {
-    width: 100%;
-    margin-bottom: 40px;
-
-    .primary-navigation {
-      font-size: 95%;
-      max-width: 1100px;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: $gap;
-      list-style: none;
-      align-items: center;
-      justify-content: end;
-
-      li {
-        a {
-          &:visited {
-            color: white;
-          }
-        }
-      }
-    }
-
-    .mobile-menu {
-      display: none;
-    }
-
-    .mobile-nav-icon {
-      display: none;
-    }
-
-    button {
-      display: none;
-    }
-  }
 
   .hero-container {
     margin-bottom: 30px;

@@ -82,6 +82,138 @@ nav .primary-navigation li a:hover, nav .primary-navigation li a:focus {
   }
 }
 
+@media (max-width: 600px) {
+  nav {
+    background-color: none;
+  }
+  nav .primary-navigation {
+    -webkit-box-align: right;
+        -ms-flex-align: right;
+            align-items: right;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: 25vh 2em;
+    gap: 4rem;
+    z-index: 1000;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 350ms ease-out;
+    transition: -webkit-transform 350ms ease-out;
+    transition: transform 350ms ease-out;
+    transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
+  }
+  nav .primary-navigation[data-visible="true"] {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .logo {
+    padding-block: 2em 1em;
+  }
+  .mobile-menu {
+    fill: white;
+    float: right;
+  }
+  .mobile-nav-icon {
+    height: 24px;
+    width: 24px;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+  }
+  button {
+    background: transparent;
+    border: none;
+  }
+}
+
+@media (min-width: 600px) {
+  nav {
+    width: 100%;
+  }
+  nav .logo {
+    padding-block: 2em 2em;
+    max-width: 680px;
+  }
+  nav .primary-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 6em;
+    font-size: 1.5vw;
+    list-style: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #006d77;
+  }
+  nav .primary-navigation li a:visited {
+    color: white;
+  }
+  nav .primary-navigation li a:hover, nav .primary-navigation li a:focus {
+    color: #e29578;
+  }
+  nav .mobile-menu {
+    display: none;
+  }
+  nav .mobile-nav-icon {
+    display: none;
+  }
+  nav button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  nav {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  nav .primary-navigation {
+    font-size: 95%;
+    max-width: 1100px;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 8em;
+    list-style: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  nav ul li a:visited {
+    color: white;
+  }
+  nav .mobile-menu {
+    display: none;
+  }
+  nav .mobile-nav-icon {
+    display: none;
+  }
+  nav button {
+    display: none;
+  }
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #edf6f9;
@@ -601,96 +733,7 @@ footer .footer-container .social-links .social-icon svg {
   margin-bottom: 10px;
 }
 
-@media (max-width: 600px) {
-  nav {
-    background-color: none;
-  }
-  nav .primary-navigation {
-    -webkit-box-align: right;
-        -ms-flex-align: right;
-            align-items: right;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    position: fixed;
-    inset: 0 0 0 30%;
-    padding: 25vh 2em;
-    gap: 4rem;
-    z-index: 1000;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 350ms ease-out;
-    transition: -webkit-transform 350ms ease-out;
-    transition: transform 350ms ease-out;
-    transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
-  }
-  nav .primary-navigation[data-visible="true"] {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  .logo {
-    padding-block: 2em 1em;
-  }
-  .mobile-menu {
-    fill: white;
-    float: right;
-  }
-  .mobile-nav-icon {
-    height: 24px;
-    width: 24px;
-  }
-  .mobile-nav-toggle {
-    display: block;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 9999;
-  }
-  button {
-    background: transparent;
-    border: none;
-  }
-}
-
 @media (min-width: 600px) {
-  nav {
-    width: 100%;
-  }
-  nav .logo {
-    padding-block: 2em 2em;
-    max-width: 680px;
-  }
-  nav .primary-navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 6em;
-    font-size: 1.5vw;
-    list-style: none;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #006d77;
-  }
-  nav .primary-navigation li a:visited {
-    color: white;
-  }
-  nav .primary-navigation li a:hover, nav .primary-navigation li a:focus {
-    color: #e29578;
-  }
-  nav .mobile-menu {
-    display: none;
-  }
-  nav .mobile-nav-icon {
-    display: none;
-  }
-  nav button {
-    display: none;
-  }
   main {
     max-width: 80%;
     margin: 0 auto;
@@ -1023,43 +1066,6 @@ footer .footer-container .social-list-wrapper .social-links .social-icon svg {
 }
 
 @media screen and (min-width: 900px) {
-  nav {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-  nav .primary-navigation {
-    font-size: 95%;
-    max-width: 1100px;
-  }
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 8em;
-    list-style: none;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  nav ul li a:visited {
-    color: white;
-  }
-  nav .mobile-menu {
-    display: none;
-  }
-  nav .mobile-nav-icon {
-    display: none;
-  }
-  nav button {
-    display: none;
-  }
   .hero-container {
     margin-bottom: 30px;
     width: 100%;
