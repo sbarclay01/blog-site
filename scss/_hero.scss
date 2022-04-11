@@ -1,3 +1,8 @@
+// I got lazy and did not refactor this! However, there is a lot of reused code
+// that is redundant with the base "card" class. I'd consider calling that hero
+// element a card, then handling just the overrides in this file (color, size,
+// cool background, etc.)
+
 .hero-container {
   max-width: 100vw;
 
