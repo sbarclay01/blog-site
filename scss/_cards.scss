@@ -135,6 +135,17 @@
       }
     }
   }
+
+  .card--sub-feature {
+    .card-title {
+      font-size: 1.5em;
+    }
+
+    .card-intro,
+    .byline-author {
+      font-size: 1.6ch;
+    }
+  }
 }
 
 @media (min-width: 900px) {
