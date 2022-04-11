@@ -158,12 +158,8 @@ nav button {
   nav .primary-navigation li a:hover, nav .primary-navigation li a:focus {
     color: #e29578;
   }
-  nav .mobile-menu {
-    display: none;
-  }
-  nav .mobile-nav-icon {
-    display: none;
-  }
+  nav .mobile-menu,
+  nav .mobile-nav-icon,
   nav button {
     display: none;
   }
@@ -171,7 +167,6 @@ nav button {
 
 @media screen and (min-width: 900px) {
   nav {
-    width: 100%;
     margin-bottom: 40px;
   }
   nav .primary-navigation {
@@ -179,33 +174,10 @@ nav button {
     max-width: 1100px;
   }
   nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     gap: 8em;
-    list-style: none;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-  }
-  nav ul li a:visited {
-    color: white;
-  }
-  nav .mobile-menu {
-    display: none;
-  }
-  nav .mobile-nav-icon {
-    display: none;
-  }
-  nav button {
-    display: none;
   }
 }
 

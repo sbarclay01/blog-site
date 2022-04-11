@@ -147,14 +147,8 @@ nav {
       }
     }
 
-    .mobile-menu {
-      display: none;
-    }
-
-    .mobile-nav-icon {
-      display: none;
-    }
-
+    .mobile-menu,
+    .mobile-nav-icon,
     button {
       display: none;
     }
@@ -165,7 +159,6 @@ nav {
   $gap: 8em;
 
   nav {
-    width: 100%;
     margin-bottom: 40px;
 
     .primary-navigation {
@@ -174,32 +167,8 @@ nav {
     }
 
     ul {
-      display: flex;
-      flex-direction: row;
       gap: $gap;
-      list-style: none;
-      align-items: center;
       justify-content: end;
-
-      li {
-        a {
-          &:visited {
-            color: white;
-          }
-        }
-      }
-    }
-
-    .mobile-menu {
-      display: none;
-    }
-
-    .mobile-nav-icon {
-      display: none;
-    }
-
-    button {
-      display: none;
     }
   }
 }
