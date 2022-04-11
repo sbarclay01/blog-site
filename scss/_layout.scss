@@ -1,7 +1,5 @@
 body {
   background-color: $bg-color;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
   overflow-x: hidden;
   height: 100%;
 }
