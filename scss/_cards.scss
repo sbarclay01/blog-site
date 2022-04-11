@@ -1,0 +1,162 @@
+.cards {
+  gap: 1rem;
+  width: 100%;
+  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.card {
+  color: black;
+  justify-self: start;
+  grid-column: span 4;
+  width: 100%;
+
+  &-img,
+  &-img-link {
+    width: 100%;
+  }
+
+  .cat-title {
+    line-height: 2;
+    font-size: 1.8ch;
+    color: $primary-color;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $secondary-accent-color;
+      width: 40%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &-title {
+    font-size: 2ch;
+    margin-bottom: -0.3rem;
+    color: inherit;
+
+    &-link {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &-intro {
+    font-size: 0.8rem;
+  }
+
+  .byline {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    width: max-content;
+    margin-left: auto;
+
+    &-img {
+      width: 80%;
+      border-radius: 50%;
+      grid-column: 1 / 2;
+    }
+
+    &-author {
+      font-size: 1.3ch;
+
+      &-link {
+        text-decoration: none;
+        color: black;
+        grid-column: 2 / 2;
+      }
+    }
+  }
+}
+
+.focus-section {
+  width: 100%;
+  align-items: start;
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 20px;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: $primary-accent-color;
+
+  .card {
+    grid-column: span 6;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+
+    &-title {
+      align-self: start;
+
+      &-link {
+        color: white;
+      }
+    }
+
+    &-intro {
+      color: white;
+    }
+
+    .byline {
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: 40px;
+
+      &-author-link {
+        color: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .focus-section {
+    .card {
+      &-img {
+        object-fit: cover;
+      }
+
+      &-title {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: -0.4rem;
+      }
+    }
+  }
+
+  .card--sub-feature {
+    .card-title {
+      font-size: 1.5em;
+    }
+
+    .card-intro,
+    .byline-author {
+      font-size: 1.6ch;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    grid-column: span 4;
+  }
+
+  .focus-section {
+    .card {
+      &-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
